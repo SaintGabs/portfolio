@@ -10,15 +10,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/inspiration.css">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/inspiration.js" defer></script>
 </head>
 <body>
   <header class="topbar"><a class="wordmark" href="#inicio" aria-label="Gabriel Paz, início">GP<span>.</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
-    <nav id="menu" class="nav"><a href="#sobre">Sobre</a><a href="#tecnologias">Tecnologias</a><a href="#servicos">Como posso ajudar</a><a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato" class="nav-cta">Vamos conversar <span>↗</span></a></nav>
+    <nav id="menu" class="nav"><a href="#sobre">Sobre</a><a href="#tecnologias">Tecnologias</a><a href="#servicos">Como posso ajudar</a><a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato" class="nav-cta">Vamos conversar <span>↗</span></a><button class="command-trigger" type="button" aria-haspopup="dialog" aria-controls="command-dialog"><span aria-hidden="true">⌕</span> Buscar <kbd>Ctrl K</kbd></button></nav>
   </header>
+  <dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
+    <div class="command-box">
+      <div class="command-search"><span aria-hidden="true">⌕</span><input id="command-input" type="search" placeholder="Buscar seção ou projeto…" autocomplete="off"><kbd>ESC</kbd></div>
+      <p class="command-caption" id="command-title">NAVEGAÇÃO RÁPIDA</p>
+      <nav class="command-results" aria-label="Resultados da busca">
+        <a class="command-item" href="#inicio"><span>⌂</span><span><b>Início</b><small>Apresentação</small></span><kbd>↵</kbd></a>
+        <a class="command-item" href="#sobre"><span>◎</span><span><b>Sobre</b><small>Conheça minha trajetória</small></span><kbd>↵</kbd></a>
+        <a class="command-item" href="#tecnologias"><span>⌘</span><span><b>Tecnologias</b><small>Ferramentas e estudos</small></span><kbd>↵</kbd></a>
+        <a class="command-item" href="#projetos"><span>▦</span><span><b>Projetos</b><small>Trabalhos selecionados</small></span><kbd>↵</kbd></a>
+        <a class="command-item" href="#contato"><span>↗</span><span><b>Contato</b><small>LinkedIn e GitHub</small></span><kbd>↵</kbd></a>
+        <a class="command-item" href="https://github.com/SaintGabs" target="_blank" rel="noopener"><span>⌘</span><span><b>GitHub</b><small>Repositórios públicos</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="https://github.com/SaintGabs/DragonCity-AD-Tracker" target="_blank" rel="noopener"><span>01</span><span><b>DragonCity AD Tracker</b><small>Projeto pessoal · Python</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="https://github.com/SaintGabs/Projetos/tree/main/QuadroKanban" target="_blank" rel="noopener"><span>02</span><span><b>Quadro Kanban</b><small>Projeto web</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="https://github.com/SaintGabs/Projetos/tree/main/ConsumirAPIClima" target="_blank" rel="noopener"><span>03</span><span><b>Consumo de API de clima</b><small>Estudo · Python</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="site/"><span>04</span><span><b>COPA14</b><small>Site temático · HTML e CSS</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="https://github.com/SaintGabs/StockFlow.API" target="_blank" rel="noopener"><span>05</span><span><b>StockFlow.API</b><small>Repositório · C#/.NET</small></span><kbd>↗</kbd></a>
+        <a class="command-item" href="https://github.com/kelwin-feitosa/reserva-salas" target="_blank" rel="noopener"><span>06</span><span><b>Reserva de Salas</b><small>Colaboração</small></span><kbd>↗</kbd></a>
+      </nav>
+      <div class="command-footer"><span>↑ ↓ navegar</span><span>Enter abrir</span><span>Esc fechar</span></div>
+    </div>
+  </dialog>
   <main>
     <section class="hero wrap" id="inicio">
+      <canvas class="particle-network" aria-hidden="true"></canvas>
       <div class="hero-copy"><p class="eyebrow"><span class="pulse"></span> DISPONÍVEL PARA APRENDER E COLABORAR</p>
         <h1>Construindo ideias<br>com <span>código e propósito.</span></h1>
         <p class="intro">Olá, sou Gabriel Paz — estudante de Análise e Desenvolvimento de Sistemas, explorando desenvolvimento web, automação e soluções que resolvem problemas reais.</p>
